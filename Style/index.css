@@ -1,0 +1,27 @@
+* /* Придает плавности всем обьектам */
+{
+    transition: 1s;
+}
+
+@keyframes AnimBodyLoad  /* Анимация для затемнения фона страницы */
+{
+    from
+    {
+        opacity: 0;        
+    }
+    50%
+    {        
+        opacity: 0.5;
+    }
+    to
+    {
+        opacity: 1;
+        background-color: rgb(172, 172, 172);
+    }
+}
+
+
+body /* Затемнения фона страницы */
+{
+    animation: AnimBodyLoad 5s;
+}
