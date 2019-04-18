@@ -70,16 +70,15 @@ document.addEventListener("DOMContentLoaded", function ()
             var RootElement = this;
             ButtonElement.addEventListener("click", function () 
             {                
-                if (NextUserGood(InputLoginElement.value, InputPasswordElement.value))  
+                if (Kernel.UserAuthenticationInTheSystem(InputLoginElement.value, InputPasswordElement.value))  
                 {                    
                     RootElement.style.opacity = "0";
-                    RootElement.style.top = "-340px";
-                    Error_Message("Успешная авторизация", false);
+                    RootElement.style.top = "-340px";                    
                 }
                 else
                 {
                     RootElement.style.boxShadow = '0 0 15px Red';
-                    Error_Message("Не верный логин или пароль", true);
+                    Kernel.NewAlert('Ошибка авторизации', 'Не верный логин или пароль')
                 }
             });
             

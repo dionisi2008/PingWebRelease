@@ -4,9 +4,10 @@ class alert_panel extends HTMLElement
         
         NewAlert(Message, TextMessage)
         {
-            this.style.right = '20px';
-            this.getElementsByTagName('b')[0].innerText = Message;
-            this.getElementsByTagName('label')[0].innerText = TextMessage;
+            var AlertHtmlElement = document.getElementsByTagName('alert-panel')[0];
+            AlertHtmlElement.style.right = '20px';
+            AlertHtmlElement.getElementsByTagName('b')[0].innerText = Message;
+            AlertHtmlElement.getElementsByTagName('label')[0].innerText = TextMessage;
         }
 
         constructor ()
@@ -67,7 +68,7 @@ class alert_panel extends HTMLElement
            
         }
         
-   
+        
         
     }
 
